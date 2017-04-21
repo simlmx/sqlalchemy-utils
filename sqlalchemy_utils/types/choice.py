@@ -32,6 +32,9 @@ class Choice(object):
             value=self.value
         )
 
+    def __hash__(self):
+        return hash(self.code)
+
 
 class ChoiceType(types.TypeDecorator, ScalarCoercible):
     """
